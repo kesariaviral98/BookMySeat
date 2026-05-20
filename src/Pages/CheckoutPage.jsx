@@ -30,34 +30,35 @@ const CheckoutPage = ({ selectedSeats, setSelectedSeats }) => {
   return (
     <main className="page-shell">
       <section className="checkout-card">
-        <p className="eyebrow">Final step</p>
-        <h1>Checkout</h1>
+        <p className="eyebrow">Complete Booking</p>
+        <h1>Order Summary</h1>
 
         {isConfirmed ? (
           <>
             <p className="success-banner">
-              Booking confirmed successfully. Your seats are reserved.
+              Your booking is confirmed. Enjoy the show — your seats are
+              reserved and waiting.
             </p>
             <button
               type="button"
               className="primary-button"
               onClick={() => navigate("/")}
             >
-              Book more seats
+              Book More Seats
             </button>
           </>
         ) : sortedSeats.length === 0 ? (
           <>
             <p className="empty-state">
-              No seats have been selected yet. Go back and choose at least one
-              seat to continue.
+              No seats selected. Head back and choose at least one seat before
+              proceeding.
             </p>
             <button
               type="button"
               className="secondary-button"
               onClick={() => navigate("/")}
             >
-              Back to booking
+              Back to Booking
             </button>
           </>
         ) : (
@@ -82,14 +83,14 @@ const CheckoutPage = ({ selectedSeats, setSelectedSeats }) => {
                 className="primary-button"
                 onClick={handleConfirmBooking}
               >
-                Confirm booking
+                Confirm Booking
               </button>
               <button
                 type="button"
                 className="secondary-button"
                 onClick={() => navigate("/")}
               >
-                Back
+                Back to Booking
               </button>
             </div>
           </>

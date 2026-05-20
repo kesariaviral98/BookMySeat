@@ -1,94 +1,53 @@
-# Seat Booking App
+# BookMySeat
 
-A simple React + Vite application for selecting theater seats and completing a basic checkout flow.
+A theater seat reservation app built with React and Vite. Select seats from an interactive layout, review your order, and confirm your booking in one clean flow.
 
 ## Features
 
-- Interactive seat selection layout
-- Live booking summary with selected seats and total amount
-- Checkout page with booking confirmation flow
-- Selected seats persisted in the browser with `localStorage`
-- Responsive UI for desktop and mobile screens
+- Interactive seat grid with aisle separation
+- Live booking summary — seats and total update as you pick
+- Checkout page with order confirmation
+- Selected seats persisted in `localStorage`
+- Responsive layout for desktop and mobile
+- Dark cinematic theme with Playfair Display headings, gold accents, and crimson seat highlights
 
 ## Tech Stack
 
-- React
-- Vite
-- React Router
-- ESLint
+- React 19
+- Vite 7
+- React Router v7
+- Google Fonts (Playfair Display, Inter)
 
 ## Getting Started
 
-### 1. Install dependencies
-
 ```bash
 npm install
-```
-
-### 2. Start the development server
-
-```bash
 npm run dev
 ```
 
-### 3. Build for production
+Open [http://localhost:5173](http://localhost:5173) in your browser.
+
+### Other commands
 
 ```bash
-npm run build
-```
-
-### 4. Run lint checks
-
-```bash
-npm run lint
+npm run build    # production build
+npm run preview  # preview the build locally
+npm run lint     # run ESLint
 ```
 
 ## Project Structure
 
-```text
+```
 src/
-  App.jsx
-  index.css
+  index.css           # global styles and design tokens
   main.jsx
+  App.jsx
   Pages/
-    BookingPage.jsx
-    CheckoutPage.jsx
-```
-
-## Improvements Made
-
-- Replaced the default Vite README with project-specific documentation
-- Improved the seat booking UI and overall styling
-- Added seat sorting and cleaner state updates
-- Prevented checkout from proceeding with no selected seats
-- Added a confirmation state on checkout
-- Persisted selected seats in browser storage
-
-## Add This Project To GitHub
-
-Initialize Git locally:
-
-```bash
-git init
-git add .
-git commit -m "Initial commit"
-```
-
-Create a new empty repository on GitHub, then connect and push:
-
-```bash
-git remote add origin <your-github-repo-url>
-git branch -M main
-git push -u origin main
-```
-
-Example remote URL:
-
-```bash
-https://github.com/your-username/seat_booking.git
+    BookingPage.jsx   # seat selection + live summary
+    CheckoutPage.jsx  # order review + confirmation
 ```
 
 ## Notes
 
-- `node_modules` should not be committed to GitHub.
-- This project currently uses a fixed ticket price of `₹1000` per seat.
+- Ticket price is fixed at ₹1 000 per seat.
+- `node_modules/` and `dist/` are excluded from version control.

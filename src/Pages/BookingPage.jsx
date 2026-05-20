@@ -36,11 +36,11 @@ const BookingPage = ({ selectedSeats, setSelectedSeats }) => {
   return (
     <main className="page-shell">
       <section className="hero-card">
-        <p className="eyebrow">Theater Seat Reservation</p>
-        <h1>Choose your seats</h1>
+        <p className="eyebrow">Now Showing</p>
+        <h1>Choose Your Seats</h1>
         <p className="hero-copy">
-          Pick from the layout below, review your selection instantly, and move
-          to checkout when you&apos;re ready.
+          Browse the layout, select as many seats as you like, and head to
+          checkout whenever you&apos;re ready.
         </p>
 
         <div className="stats-row">
@@ -108,10 +108,9 @@ const BookingPage = ({ selectedSeats, setSelectedSeats }) => {
         </div>
 
         <aside className="summary-card">
-          <h2>Booking summary</h2>
+          <h2>Your Selection</h2>
           <p className="summary-copy">
-            Your chosen seats will stay saved in the browser until you confirm
-            the booking.
+            Seats are held in your browser until you confirm the booking.
           </p>
 
           <div className="summary-block">
